@@ -68,3 +68,66 @@ function getCoolCities(arrayOfCityObjs) {
 
 // console.log(testCities(getCoolCities));
 // works :)
+// took me a while. Got confused on if I needed to chain map and filter or just do more in my helperFn
+
+function getCityName(cityObj) {
+    return cityObj.name;
+}
+
+function getCityNames(arrayOfCityObjs) {
+    // I want to take the array, get all the names, return an array of city names (same length arrays = map)
+    // Helper function just grabs the city object key value
+    const arrayOfCityNames = arrayOfCityObjs.map(getCityName)
+    return arrayOfCityNames;
+}
+
+// console.log(testCities(getCityNames));
+// works :)
+
+
+function testNames(fN) {
+    const people = [
+        'Dom',
+        'Lyn',
+        'Kirk',
+        'Autumn',
+        'Trista',
+        'Jesslyn',
+        'Kevin',
+        'John',
+        'Eli',
+        'Juan',
+        'Robert',
+        'Keyur',
+        'Jason',
+        'Che',
+        'Ben'
+      ];
+    return fN(people);
+}
+
+function printGoodJob(arrayOfPeopleNames) {
+    for (let name of arrayOfPeopleNames) {
+        console.log(`Good job ${name}!`);
+    }
+}
+
+// console.log(testNames(printGoodJob));
+// works :), but had to add the Good job string and remember cash curlies
+
+function helloWorld() {
+    console.log("Hello, world!");
+}
+
+function call3Times(fN) {
+    fN();
+    fN();
+    fN();
+}
+
+// call3Times(helloWorld);
+// works :)
+
+function callNTimes(times, fN) {
+    
+}

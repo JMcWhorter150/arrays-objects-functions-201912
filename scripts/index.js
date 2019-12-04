@@ -169,3 +169,33 @@ function strMultiplyRange(str, times) {
 // console.log(strMultiplyRange("foot", 3));
 // works :)
 // uses the range method so that you don't have to do old school for loop. While would also loop. Range could allow you to use 
+
+function sortNamesAlphabetical(arrayOfPeopleNames) {
+    arrayOfPeopleNames.sort();
+    return arrayOfPeopleNames;
+}
+
+// console.log(testNames(sortNamesAlphabetical));
+// testNames(console.log);
+// works :)
+// Tried to use sort(arrayOfPeopleNames) first, which failed. It's a method for arrays. If done inside the function, it does not affect the list in another function...maybe
+
+function compareNameLength(name1, name2) {
+    if (name1.length < name2.length) {
+        return -1;
+    }
+    if (name1.length > name2.length) {
+        return 1;
+    }
+    return 0;
+}
+
+function sortNamesLength(arrayOfPeopleNames) {
+    arrayOfPeopleNames.sort(compareNameLength);
+    return arrayOfPeopleNames;
+}
+
+// console.log(testNames(sortNamesLength));
+// testNames(console.log);
+// works :)
+

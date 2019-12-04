@@ -15,6 +15,7 @@ function test_1(fN) {
 }
 
 // console.log(test_1(getPositiveNumbers));
+// worked :)
 function isEven(number) {
     return (number % 2 === 0)
 }
@@ -25,3 +26,15 @@ function getEvenNumbers(arrayOfNumbers) {
 }
 
 // console.log(test_1(getEvenNumbers));
+// worked :)
+function squareNumber(number) {
+    return number * number;
+}
+
+function getSquaredNumbers(arrayOfNumbers) {
+    const arrayOfSquaredNumbers = arrayOfNumbers.map(squareNumber);
+    return arrayOfSquaredNumbers;
+}
+
+// console.log(test_1(getSquaredNumbers));
+// worked :)

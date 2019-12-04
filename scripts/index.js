@@ -199,3 +199,27 @@ function sortNamesLength(arrayOfPeopleNames) {
 // testNames(console.log);
 // works :)
 
+function testProducts(fN) {
+    const products = [
+        { name: 'Basketball', price: 12.00 },
+        { name: 'Tennis Racquet', price: 66.00 },
+        { name: 'Tennis Balls', price: 9.00 },
+        { name: 'Tennis Balls', price: 9.00 }
+      ];
+    return fN(products);      
+}
+
+function comparePrices(Obj1, Obj2) {
+    return Obj1.price - Obj2.price;
+}
+
+function sortProductPrice(arrayOfProductObjs) {
+    const sortedProductObjs = arrayOfProductObjs.sort(comparePrices);
+    return sortedProductObjs;
+}
+
+// console.log(testProducts(sortProductPrice));
+// testProducts(console.log);
+// works :)
+// Had a lot of issues trying to create an array of prices, sort the prices, and then sort the objects using the index numbers. Learned I was dumb on MDN, and that you can just compare the prices in situ.
+

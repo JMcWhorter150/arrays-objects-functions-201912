@@ -129,5 +129,43 @@ function call3Times(fN) {
 // works :)
 
 function callNTimes(times, fN) {
-    
+    for (let i=0; i<times; i++) {
+        fN();
+    }
 }
+
+// callNTimes(5, helloWorld);
+// works :)
+// Had to change from doing for of loop to old school for loop
+
+function range(min, max) {
+    const arr = [];
+    for (var i = min; i < max; i++) {
+      arr.push(i);
+    }
+    return arr;
+  }
+
+function strMultiply(str, times) {
+    newStr = "";
+    for (let i=0; i<times; i++) {
+        newStr += str;
+    }
+    return newStr;
+}
+
+// console.log(strMultiply("abc", 5));
+// works :)
+// Doesn't use the range method. Have no idea how I would do that
+
+function strMultiplyRange(str, times) {
+    newStr = "";
+    for (let index of range(0, times)) {
+        newStr += str;
+    }
+    return newStr;
+}
+
+// console.log(strMultiplyRange("foot", 3));
+// works :)
+// uses the range method so that you don't have to do old school for loop. While would also loop. Range could allow you to use 
